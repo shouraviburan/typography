@@ -34,18 +34,20 @@ article {
 
 article > div {
     display: inline-block;
-    width: 48%
+    width: 48%;
+    float: left; /* This drags the description on the left to the top. Also: play with the width of div and aside */
 }
 
 aside {
     /* how to add margin or padding here? */       
     display: inline-block;
-    width: 50%;
+    width: 46%;
     height: auto;
     /* background-color: #bba6aa;
     opacity: 0.5;*/
     border: 1px #cca138 solid;
     border-radius: 10px;
+    /* text-align: center; */
     overflow: none;
 }
 
@@ -60,19 +62,30 @@ aside > ul > li {
     display: inline-block;
     border: 5px solid #7a3736;
     border-radius: 50%;
+    
 }
 
 aside > ul > li:nth-child(2) {
     border: 5px solid #9c6853;
+    
 }
 
 aside > ul > li:nth-child(3) {
     border: 5px solid #618f74;
+    
+}
+
+section:nth-of-type(1) > article:nth-of-type(1) > aside {
+    color: #7a3736;
+}
+
+section:nth-of-type(1) > article:nth-of-type(2) > aside {
+    color: rgba(163, 140, 247, 0.666);
 }
 
 section:nth-of-type(2) > article:nth-of-type(1) > aside {
     font-family: Arial, Helvetica, sans-serif;
-    color: #7a3736;
+    
 }
 
 section:nth-of-type(2) > article:nth-of-type(2) > aside {
@@ -80,39 +93,18 @@ section:nth-of-type(2) > article:nth-of-type(2) > aside {
     
 }
 
+section:nth-of-type(2) > article:nth-of-type(2) > aside {
+    font-family: 'Sansita Swashed', cursive;  
+    
+}
+
 section:nth-of-type(2) > article:nth-of-type(3) > aside {
-    font-family: 'Sansita Swashed', cursive;
-    color: magenta;
+    font-family: "My new font", sans-serif;    
     
 }
 
-section:nth-of-type(2) > article:nth-of-type(4) > aside {
-    font-family: "My new font", sans-serif;
-    color: lightseagreen;
-    
-}
 
-section:nth-of-type(3) > article:nth-of-type(2) > aside {
-    height: 350px;
-}
-
-section:nth-of-type(4) > article:nth-of-type(2) > aside {
-    height: 320px;
-}
-
-section:nth-of-type(4) > article:nth-of-type(3) > aside {
-    height: 330px;
-}
-
-section:nth-of-type(4) > article:nth-of-type(4) > aside {
-    height: 350px;
-}
-
-section:nth-of-type(4) > article:nth-of-type(9) > aside {
-    height: 180px;
-}
-
-section:nth-of-type(3) > article:nth-of-type(2) > aside > div {
+section:nth-of-type(3) > article:nth-of-type(1) > aside > div {
     background-color: #1eb3a5;
     margin: 10px;
     padding-bottom: 10px;
@@ -120,19 +112,28 @@ section:nth-of-type(3) > article:nth-of-type(2) > aside > div {
 
 }
 
-section:nth-of-type(3) > article:nth-of-type(2) > aside > div > div {
+section:nth-of-type(3) > article:nth-of-type(1) > aside > div > div {
     background-color: #997098;
     margin: 10px;
     padding-bottom: 10px;
     font-size: 1.2em;
 }
 
-section:nth-of-type(3) > article:nth-of-type(2) > aside > div > div > div {
+section:nth-of-type(3) > article:nth-of-type(1) > aside > div > div > div {
     background-color: #bcc9c0;
     margin: 10px;
     padding-bottom: 10px;
     font-size: 1.2em;
 }
+
+.mark {
+    background-color: #dbc99e;
+}
+
+.highlight {
+        background-color: #fff2ac;
+        background-image: linear-gradient(to right, #c0ab78, #dbc99e);
+    }
 
 .h2 {
     text-align: center;

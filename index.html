@@ -16,9 +16,13 @@
     </header>
     <main>
         <section>
+            <h2>color</h2>
         <article>
             <div>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem ut at optio quidem corporis deleniti, asperiores officia quibusdam numquam. Incidunt consequuntur temporibus excepturi quae ex.
+                <h4>Default value</h4>
+                <p>Defines the colour of the text. <br><br>
+                <span class="highlight">color: "color-value"</span>
+                </p>
             </div>
             
             <aside>
@@ -32,12 +36,12 @@
                 </p>
             </aside>
         </article>
-
-        <br><br>
+        
+        <br><br><!-- break for balance -->
         <article>
-            <div>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet illum nisi ducimus obcaecati et dicta? Officia atque beatae quam! Fuga.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, suscipit.
+            <div><h4>Transparent color </h4>
+                <p>Color can be transparent with the alpha value of color codes. <br><br>
+                <span class="highlight">{color: rgba(163, 140, 247, 0.666)}</span></p>
             </div>
             <aside>
                 <ul>
@@ -53,14 +57,10 @@
     </section>
 
     <section>
-
+        <h2>font-family</h2>
         <article>            
             <div>
-                <ul>
-                    <li>First font the browser will try: Arial</li>
-                    <li>...then Helvetica</li>
-                    <li>in the end it will pick sans-serif family</li>
-                </ul>
+                When using multiple values, the font-family list of font families defines the priority in which the browser should choose the font family.
             </div>
 
             <aside>
@@ -77,23 +77,7 @@
         
         <article>
             <div>
-                Here is the embedded font from Google. Don't forget to insert the icon website link into <head>. Then add font-family.
-            </div>
-            <aside>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <p>
-                    Hello World
-                </p>
-            </aside>
-        </article>
-    
-        <article>
-            <div>
-                Here could be your ad. 
+                Here is the embedded font from Google. Don't forget to insert the link into HEAD. 
             </div>
             <aside>
                 <ul>
@@ -107,10 +91,15 @@
             </aside>
         </article>
     
-        <br><br>
         <article>            
                 <div>
-                    Add the .ttf file to the folder "assets", import the
+                    Add the .ttf file to the folder "assets" and use the @font-face tag: <br><br>
+                    <span class="highlight">
+                    @font-face {<br>
+                        font-family: "My new font";<br>
+                        src: url('./assets/Pacifico.ttf')
+                    }    </span>
+                    
                 </div>
 
                 <aside>
@@ -119,32 +108,18 @@
                         <li></li>
                         <li></li>
                     </ul>
-                    <p>
-                    My new font
-                    </p>
+                    <p>My new font</p>
                 </aside>
         </article>
     </section>
 
     <section>
+        <h2>font-sizes</h2>
+        
         <article>
-            <div>
-                <h2>Font Sizes!</h2>
-            </div>
-            
-            <aside>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                </aside>
-        </article>
-
-        <article>
-            <div>
-                Add description later. <br>
-                Div > div > div
+            <div><h4>The em value and relativity</h4>
+                The value is relative to the parent's font-size. <br>
+                As a result, the value will cascade if used on child elements. <br>
             </div>
             <aside>
                 <ul>
@@ -165,12 +140,16 @@
                 </p>
             </aside>
         </article>
-    </section>
 
-    
-    <section>
         <article>
-            <div>LEFT</div>
+            <div><h4>Other values</h4>
+                <ul>
+                    <li>Rem value is relative to the root element's font-size, which is the html element.</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
             <aside>
                 <ul>
                     <li></li>
@@ -182,52 +161,48 @@
                         <div>
                         I'm 1.2 rem
                         </div>
+                        <br>
                     </div>
-            </aside>
-        </article>
-        
-        <br>
-        <article>
-            <div>LEFT</div>
-            <aside>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div class='larger'>
-                    I'm larger
-                    <div>
+                    <div class='larger'>
                         I'm larger
                         <div>
-                            I'm larger                     
+                            I'm larger
+                            <div>
+                                I'm larger                     
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class='smaller'>
-                    I'm smaller
-                    <div>
+                    <br>
+                    <div class='smaller'>
                         I'm smaller
                         <div>
-                            I'm smaller                    
+                            I'm smaller
+                            <div>
+                                I'm smaller                    
+                            </div>
                         </div>
                     </div>
-                </div>
-        
-                <br>
-        
-                <div class="sm">small</div>
-                <div class="md">medium</div>
-                <div class="lg">large</div>
-                <br>
-                <div class="percent">120% text</div>
-                <div>
-                    Products on <span class="special">SALE</span> -- <small><del>30%</del></small> 50%!
-                </div>
+            
+                    <br>
+            
+                    <div class="sm">small</div>
+                    <div class="md">medium</div>
+                    <div class="lg">large</div>
+                    <br>
+                    <div class="percent">120% text</div>
+                    <div>
+                        Products on <span class="special">SALE</span> -- <small><del>30%</del></small> 50%!
+                    </div>
             </aside>
         </article>
 
+
+    </section>
+
+    
+    <section>
+        <h2>other text and font effects</h2>
+        
         <article>
             <div><h2>text-align</h2></div>
             <aside>
@@ -342,13 +317,7 @@
 
         <article>
             <div><h2>text-shadow</h2>
-                h-shadow 	Required. The position of the horizontal shadow. Negative values are allowed <br>
-                v-shadow 	Required. The position of the vertical shadow. Negative values are allowed 	<br>
-                blur-radius 	Optional. The blur radius. Default value is 0 	<br>
-                color 	Optional. The color of the shadow. Look at CSS Color Values for a complete list of possible color values <br>	
-                none 	Default value. No shadow <br>	
-                initial 	Sets this property to its default value. <br>	
-                inherit 	Inherits this property from its parent element. </div>
+                </div>
             <aside>
                 <ul>
                     <li></li>
